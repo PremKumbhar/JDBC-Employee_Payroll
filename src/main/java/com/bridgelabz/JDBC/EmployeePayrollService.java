@@ -10,7 +10,7 @@ public class EmployeePayrollService {
         String jdbcURL = "jdbc:mysql://localhost:3306/payroll_service?useSSL=false";
         String userName = "root";
         String password = "Prem@7738";
-        Connection con;
+        Connection connection;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             System.out.println("Driver loaded! ");
@@ -22,8 +22,8 @@ public class EmployeePayrollService {
 
         try {
             System.out.println("Connecting to database:"+jdbcURL);
-            con = DriverManager.getConnection(jdbcURL, userName, password);
-            System.out.println("Connection is succesfull!!!!"+con);
+            connection = DriverManager.getConnection(jdbcURL, userName, password);
+            System.out.println("Connection is succesfull!!!!"+connection);
 
         }
         catch (Exception e) {
